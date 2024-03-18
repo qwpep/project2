@@ -1,0 +1,111 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// Функция для сложения
+double add(double a, double b)
+{
+   return a + b;
+}
+
+// Функция для вычитания
+double subtract(double a, double b)
+{
+   return a - b;
+}
+
+// Функция для умножения
+double multiply(double a, double b)
+{
+   return a * b;
+}
+
+// Функция для деления
+double divide(double a, double b)
+{
+   if (b != 0)
+   {
+      return a / b;
+   }
+   else
+   {
+      cout << "Ошибка: деление на ноль!" << endl;
+      return 0;
+   }
+}
+
+// Функция для возведения в степень
+double power(double base, double exponent)
+{
+   return pow(base, exponent);
+}
+
+// Функция для извлечения квадратного корня
+double sqrt(double num)
+{
+   return sqrt(num);
+}
+
+// Функция для нахождения модуля числа
+double abs(double num)
+{
+   return abs(num);
+}
+
+// Функция для округления числа
+double rounds(double num)
+{
+   return round(num);
+}
+
+int main()
+{
+   char op;
+   double num1, num2;
+
+   cout << "Введите оператор (+, -, *, /, ^, s, a, r): ";
+   cin >> op;
+
+   cout << "Введите два числа: ";
+   cin >> num1 >> num2;
+
+   // Вызов нужной функции в зависимости от оператора
+   if (op == '+')
+   {
+      cout << num1 << " + " << num2 << " = " << add(num1, num2) << endl;
+   }
+   else if (op == '-')
+   {
+      cout << num1 << " - " << num2 << " = " << subtract(num1, num2) << endl;
+   }
+   else if (op == '*')
+   {
+      cout << num1 << " * " << num2 << " = " << multiply(num1, num2) << endl;
+   }
+   else if (op == '/')
+   {
+      cout << num1 << " / " << num2 << " = " << divide(num1, num2) << endl;
+   }
+   else if (op == '^')
+   {
+      cout << num1 << " ^ " << num2 << " = " << power(num1, num2) << endl;
+   }
+   else if (op == 's')
+   {
+      cout << "sqrt(" << num1 << ") = " << sqrt(num1) << endl;
+   }
+   else if (op == 'a')
+   {
+      cout << "abs(" << num1 << ") = " << abs(num1) << endl;
+   }
+   else if (op == 'r')
+   {
+      cout << "round(" << num1 << ") = " << rounds(num1) << endl;
+   }
+   else
+   {
+      cout << "Ошибка: неверный оператор!" << endl;
+   }
+
+   return 0;
+}
